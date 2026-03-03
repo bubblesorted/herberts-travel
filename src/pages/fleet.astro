@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const vehicles = [
+  {
+    name: "Premium Double-Decker",
+    image: "/images/enhanced/fleet-modern.jpg",
+    capacity: "Up to 78 passengers",
+    features: ["Comfortable seating", "Seatbelts fitted", "CCTV", "Large luggage capacity"],
+    ideal: "Private hire, large group day trips"
+  },
+  {
+    name: "Touring Coach",
+    image: "/images/enhanced/touring-coach.jpg",
+    capacity: "Up to 57 passengers",
+    features: ["Modern styling", "Seatbelts fitted", "CCTV", "Climate control"],
+    ideal: "Day trips, countryside tours"
+  },
+  {
+    name: "School Service Bus",
+    image: "/images/enhanced/school-community.jpg",
+    capacity: "Up to 88 passengers",
+    features: ["DBS-checked drivers", "Seatbelts fitted", "CCTV", "Regular service"],
+    ideal: "School contracts, community transport"
+  }
+];
+---
+<Layout title="Our Fleet | Herberts Travel" description="View our fleet of modern coaches and double-decker buses, seating up to 88 passengers.">
+  <!-- Hero -->
+  <section class="bg-navy-dark text-white py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl sm:text-5xl">Our Fleet</h1>
+      <p class="mt-4 text-white/70 text-lg max-w-2xl">37 vehicles, all well-maintained and regularly inspected. Whatever the size of your group, we've got something that fits.</p>
+    </div>
+  </section>
+
+  <!-- Vehicle Grid -->
+  <section class="py-16 sm:py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {vehicles.map(vehicle => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img src={vehicle.image} alt={vehicle.name} class="w-full h-56 object-cover" />
+            <div class="p-6">
+              <h3 class="font-heading text-xl text-navy-dark">{vehicle.name}</h3>
+              <p class="text-gold-dark font-medium text-sm mt-1">{vehicle.capacity}</p>
+              <ul class="mt-4 space-y-2">
+                {vehicle.features.map(feature => (
+                  <li class="flex items-center gap-2 text-gray-600 text-sm">
+                    <svg class="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-4 text-xs text-gray-400 uppercase tracking-wide">Ideal for: {vehicle.ideal}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Safety First - redesigned -->
+      <div class="mt-16 relative">
+        <div class="absolute inset-0 bg-navy rounded-2xl"></div>
+        <div class="relative rounded-2xl p-8 sm:p-10">
+          <h3 class="font-heading text-2xl text-white mb-2">Safety first. Always.</h3>
+          <p class="text-white/50 text-sm mb-8 max-w-lg">Every vehicle, every driver, every journey — no exceptions, no shortcuts.</p>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+              <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-gold/20 flex items-center justify-center">
+                <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <p class="text-white font-medium text-sm">DBS-Checked Drivers</p>
+              <p class="text-white/40 text-xs mt-1">Every single one</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+              <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-gold/20 flex items-center justify-center">
+                <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25z" />
+                </svg>
+              </div>
+              <p class="text-white font-medium text-sm">CCTV on Board</p>
+              <p class="text-white/40 text-xs mt-1">Every vehicle</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+              <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-gold/20 flex items-center justify-center">
+                <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.049.58.025 1.193-.14 1.743" />
+                </svg>
+              </div>
+              <p class="text-white font-medium text-sm">Regular Inspections</p>
+              <p class="text-white/40 text-xs mt-1">Serviced on schedule</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+              <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-gold/20 flex items-center justify-center">
+                <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                </svg>
+              </div>
+              <p class="text-white font-medium text-sm">Always On Time</p>
+              <p class="text-white/40 text-xs mt-1">That's a promise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-navy py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl text-white">Not sure which vehicle you need?</h2>
+      <p class="mt-4 text-white/70 text-lg">Tell us your group size, date, and destination — we'll match you to the right one.</p>
+      <a href="/contact" class="inline-flex items-center justify-center mt-8 px-8 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded-lg transition-colors text-lg">
+        Get a Quote
+      </a>
+    </div>
+  </section>
+</Layout>

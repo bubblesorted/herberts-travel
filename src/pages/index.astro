@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Herberts Travel | Coach & Bus Hire">
+  <!-- Hero: Split layout -->
+  <section class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="bg-navy-dark text-white flex items-center">
+      <div class="max-w-xl mx-auto px-6 sm:px-10 lg:px-12 py-16 sm:py-20 lg:py-28">
+        <h1 class="font-heading text-4xl sm:text-5xl leading-tight">
+          Getting people where they need to be — <span class="text-gold">since 1990</span>
+        </h1>
+        <p class="mt-6 text-lg text-white/70 leading-relaxed">
+          Coach and bus hire across Bedfordshire, Hertfordshire and Cambridgeshire. Whether it's the school run, a corporate away day, or a trip to the coast — we'll get you there comfortably and on time.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded-lg transition-colors text-lg">
+            Get a Free Quote
+          </a>
+          <a href="/services" class="inline-flex items-center justify-center px-8 py-3 border-2 border-white/30 hover:border-white/60 text-white font-medium rounded-lg transition-colors text-lg">
+            What We Do
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="relative h-72 sm:h-96 lg:h-auto">
+      <img src="/images/hero-bridge.jpg" alt="Herberts Travel coaches crossing stone bridge at golden hour" class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="relative bg-navy overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(200,151,62,0.3) 100px, rgba(200,151,62,0.3) 101px);"></div>
+    </div>
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/0 via-gold to-gold/0"></div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-heading text-3xl sm:text-4xl text-gold" data-count="30">0</div>
+          <div class="mt-1 text-sm text-white/60 uppercase tracking-wider">Years on the road</div>
+        </div>
+        <div>
+          <div class="font-heading text-3xl sm:text-4xl text-gold" data-count="500000" data-suffix="+" data-format="compact">0</div>
+          <div class="mt-1 text-sm text-white/60 uppercase tracking-wider">Miles driven</div>
+        </div>
+        <div>
+          <div class="font-heading text-3xl sm:text-4xl text-gold" data-count="15" data-suffix="+">0</div>
+          <div class="mt-1 text-sm text-white/60 uppercase tracking-wider">Schools served</div>
+        </div>
+        <div>
+          <div class="font-heading text-3xl sm:text-4xl text-gold" data-count="37">0</div>
+          <div class="mt-1 text-sm text-white/60 uppercase tracking-wider">Vehicles in fleet</div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/0 via-gold to-gold/0"></div>
+  </section>
+
+  <!-- Services Overview: Photo-topped cards -->
+  <section class="py-16 sm:py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl sm:text-4xl text-navy-dark">What We Do</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Three decades of getting people where they need to be — safely, comfortably, and always on time.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- School Contracts -->
+        <a href="/services#schools" class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/enhanced/school-community.jpg" alt="Herberts Travel school bus by village church" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl text-navy-dark mb-2">School Transport</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Your children are in safe hands. DBS-checked drivers, CCTV on every vehicle, and a track record that schools trust term after term.</p>
+            <span class="inline-flex items-center mt-4 text-gold-dark group-hover:text-gold font-medium text-sm">
+              Find out more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Private Hire -->
+        <a href="/services#corporate" class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/enhanced/fleet-modern.jpg" alt="Herberts Travel modern coach fleet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl text-navy-dark mb-2">Private Hire</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Weddings, parties, corporate events, airport runs — whatever the occasion, we'll get your group there in style. One less thing to worry about.</p>
+            <span class="inline-flex items-center mt-4 text-gold-dark group-hover:text-gold font-medium text-sm">
+              Find out more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Day Trips -->
+        <a href="/services#daytrips" class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <img src="/images/enhanced/scenic-road.jpg" alt="Herberts Travel coach on countryside road" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading text-xl text-navy-dark mb-2">Day Trips</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Seaside, countryside, city — wherever your group wants to go. You enjoy the day, we'll handle the driving.</p>
+            <span class="inline-flex items-center mt-4 text-gold-dark group-hover:text-gold font-medium text-sm">
+              Find out more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Preview -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-heading text-3xl sm:text-4xl text-navy-dark">Built for the journey</h2>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            Our fleet ranges from 16-seaters to full-size 78-passenger double-deckers. Every vehicle is serviced regularly, fitted with seatbelts and CCTV, and cleaned between every hire. No shortcuts.
+          </p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Modern double-decker coaches
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Seatbelts and CCTV on every vehicle
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Regularly serviced and inspected
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              16 to 78 passengers — we'll match you to the right vehicle
+            </li>
+          </ul>
+          <a href="/fleet" class="inline-flex items-center mt-8 px-6 py-3 bg-navy hover:bg-navy-dark text-white font-medium rounded-lg transition-colors">
+            See the Fleet
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="/images/enhanced/fleet-modern.jpg" alt="Herberts Travel modern double-decker coach" class="rounded-lg shadow-md w-full h-48 object-cover" />
+          <img src="/images/enhanced/scenic-road.jpg" alt="Herberts Travel coach on countryside road" class="rounded-lg shadow-md w-full h-48 object-cover" />
+          <img src="/images/enhanced/school-community.jpg" alt="Herberts Travel bus by village church" class="rounded-lg shadow-md w-full h-48 object-cover col-span-2" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial / Trust strip -->
+  <section class="bg-cream py-12 sm:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <blockquote class="font-heading text-2xl sm:text-3xl text-navy-dark italic leading-snug">
+        "We've used Herberts for our school runs for years. The drivers are brilliant with the children and they're always on time — even in the snow."
+      </blockquote>
+      <cite class="mt-4 block text-sm text-gray-500 not-italic">— Local Primary School, Buckinghamshire</cite>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-navy py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading text-3xl sm:text-4xl text-white">Let's get you on the road</h2>
+      <p class="mt-4 text-white/70 text-lg max-w-xl mx-auto">Tell us where you're going, how many people, and when — we'll sort the rest. No obligation, no fuss.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded-lg transition-colors text-lg">
+          Get a Free Quote
+        </a>
+        <a href="https://wa.me/44XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20coach%20hire" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors text-lg">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.114 1.519 5.845L.525 23.5l5.791-.984A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.628-.523-5.127-1.428l-.358-.213-3.71.973.99-3.618-.233-.371A9.723 9.723 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Count-up animation script -->
+  <script>
+    const counters = document.querySelectorAll('[data-count]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = parseInt(el.dataset.count || '0');
+          const suffix = el.dataset.suffix || '+';
+          const format = el.dataset.format || '';
+          const duration = 2000;
+          const start = performance.now();
+
+          function animate(now: number) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(eased * target);
+
+            if (format === 'compact') {
+              if (current >= 1000000) {
+                el.textContent = (current / 1000000).toFixed(1).replace('.0', '') + 'M' + suffix;
+              } else if (current >= 1000) {
+                el.textContent = Math.floor(current / 1000) + 'K' + suffix;
+              } else {
+                el.textContent = current + suffix;
+              }
+            } else {
+              el.textContent = current + suffix;
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          }
+          requestAnimationFrame(animate);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => observer.observe(c));
+  </script>
+</Layout>

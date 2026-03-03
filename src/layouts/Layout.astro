@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = "Herberts Travel - Professional coach and bus hire across Bedfordshire, Hertfordshire and Cambridgeshire. School transport, day trips, and private hire.", ogImage = "/images/bus-modern.jpeg" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+
+    <title>{title}</title>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Herberts Travel",
+      "description": "Professional coach and bus hire across Bedfordshire, Hertfordshire and Cambridgeshire",
+      "url": "https://www.herbertstravel.co.uk",
+      "logo": "https://www.herbertstravel.co.uk/images/logo.png",
+      "image": "https://www.herbertstravel.co.uk/images/bus-modern.jpeg",
+      "telephone": "+44-XXXX-XXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 51.7, "longitude": -0.7 },
+        "geoRadius": "50000"
+      },
+      "serviceType": ["Coach Hire", "Bus Hire", "School Transport", "Corporate Transport", "Day Trips"]
+    })} />
+  </head>
+  <body class="bg-warm-white text-gray-800 font-body">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppButton />
+    <!-- Cloudflare Web Analytics — free, cookieless, GDPR-friendly -->
+    <!-- Get beacon token: Cloudflare dashboard → Web Analytics → Add site -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script>
+  </body>
+</html>

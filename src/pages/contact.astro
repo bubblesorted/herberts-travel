@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact Us | Herberts Travel" description="Get in touch with Herberts Travel for a free coach hire quote. Call, WhatsApp, or email us.">
+  <!-- Hero -->
+  <section class="bg-navy-dark text-white py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl sm:text-5xl font-bold">Get in Touch</h1>
+      <p class="mt-4 text-white/70 text-lg max-w-2xl">Ready to book? Have a question? We'd love to hear from you. Get in touch and we'll get back to you quickly.</p>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="py-16 sm:py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Methods -->
+        <div class="space-y-6">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/44XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20coach%20hire" target="_blank" class="block bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center group-hover:bg-green-100 transition-colors">
+                <svg class="w-7 h-7 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.114 1.519 5.845L.525 23.5l5.791-.984A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.628-.523-5.127-1.428l-.358-.213-3.71.973.99-3.618-.233-.371A9.723 9.723 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading text-lg font-bold text-navy-dark">WhatsApp</h3>
+                <p class="text-gray-500 text-sm">Quick response, usually within the hour</p>
+                <p class="text-green-600 font-medium text-sm mt-1">Chat with us now</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:booking@herberts-travel.co.uk" class="block bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 bg-navy/5 rounded-xl flex items-center justify-center group-hover:bg-navy/10 transition-colors">
+                <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              </div>
+              <div>
+                <h3 class="font-heading text-lg font-bold text-navy-dark">Email</h3>
+                <p class="text-gray-500 text-sm">For detailed enquiries and quotes</p>
+                <p class="text-navy font-medium text-sm mt-1">booking@herberts-travel.co.uk</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Quick Quote Form -->
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h2 class="font-heading text-2xl font-bold text-navy-dark mb-6">Request a Quote</h2>
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <!-- Get your free access key at https://web3forms.com -->
+            <input type="hidden" name="access_key" value="a29fe39d-37cf-40f4-ad59-b3c6f7c82aa7" />
+            <input type="hidden" name="subject" value="New quote request from herbertstravel.co.uk" />
+            <input type="hidden" name="redirect" value="https://www.herbertstravel.co.uk/contact?success=true" />
+            <input type="checkbox" name="botcheck" class="hidden" />
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+              <select id="service" name="service" class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-colors bg-white">
+                <option value="">Select a service...</option>
+                <option value="school">School Contract</option>
+                <option value="private">Private Hire</option>
+                <option value="daytrip">Day Trip</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell us about your journey</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-colors resize-none" placeholder="Dates, group size, pickup/destination..."></textarea>
+            </div>
+            <button type="submit" class="w-full px-8 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded-lg transition-colors text-lg">
+              Send Enquiry
+            </button>
+          </form>
+          <p class="text-xs text-gray-400 mt-4 text-center">We typically respond within a few hours during business hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

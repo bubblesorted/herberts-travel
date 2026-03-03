@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1B3A5C;
+  --color-navy-dark: #0F2440;
+  --color-navy-light: #2A5580;
+  --color-gold: #C8973E;
+  --color-gold-light: #E4BE6A;
+  --color-gold-dark: #A67B2E;
+  --color-cream: #FAF8F4;
+  --color-warm-white: #FEFDFB;
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+}
