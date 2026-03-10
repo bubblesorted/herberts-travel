@@ -70,7 +70,10 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Image Banner -->
   <section class="relative h-64 sm:h-80">
-    <img src="/images/hero-bridge.jpg" alt="Herberts Travel coaches crossing stone bridge at golden hour" class="w-full h-full object-cover" />
+    <picture>
+      <source srcset="/images/hero-bridge.webp" type="image/webp" />
+      <img src="/images/hero-bridge.jpg" alt="Herberts Travel coaches crossing stone bridge at golden hour" class="w-full h-full object-cover" />
+    </picture>
     <div class="absolute inset-0 bg-navy-dark/30"></div>
   </section>
 

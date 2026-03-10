@@ -5,6 +5,7 @@ const vehicles = [
   {
     name: "Premium Double-Decker",
     image: "/images/enhanced/fleet-modern.jpg",
+    webp: "/images/enhanced/fleet-modern.webp",
     capacity: "Up to 78 passengers",
     features: ["Comfortable seating", "Seatbelts fitted", "CCTV", "Large luggage capacity"],
     ideal: "Private hire, large group day trips"
@@ -12,6 +13,7 @@ const vehicles = [
   {
     name: "Touring Coach",
     image: "/images/enhanced/touring-coach.jpg",
+    webp: "/images/enhanced/touring-coach.webp",
     capacity: "Up to 57 passengers",
     features: ["Modern styling", "Seatbelts fitted", "CCTV", "Climate control"],
     ideal: "Day trips, countryside tours"
@@ -19,6 +21,7 @@ const vehicles = [
   {
     name: "School Service Bus",
     image: "/images/enhanced/school-community.jpg",
+    webp: "/images/enhanced/school-community.webp",
     capacity: "Up to 88 passengers",
     features: ["DBS-checked drivers", "Seatbelts fitted", "CCTV", "Regular service"],
     ideal: "School contracts, community transport"
@@ -40,7 +43,10 @@ const vehicles = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {vehicles.map(vehicle => (
           <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img src={vehicle.image} alt={vehicle.name} class="w-full h-56 object-cover" />
+            <picture>
+              <source srcset={vehicle.webp} type="image/webp" />
+              <img src={vehicle.image} alt={vehicle.name} class="w-full h-56 object-cover" />
+            </picture>
             <div class="p-6">
               <h3 class="font-heading text-xl text-navy-dark">{vehicle.name}</h3>
               <p class="text-gold-dark font-medium text-sm mt-1">{vehicle.capacity}</p>
