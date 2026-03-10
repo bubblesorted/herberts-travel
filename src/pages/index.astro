@@ -2,10 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Herberts Travel | Coach & Bus Hire">
-  <!-- Hero: Split layout -->
+  <!-- Hero: Split layout — image first on mobile -->
   <section class="grid grid-cols-1 lg:grid-cols-2">
-    <div class="bg-navy-dark text-white flex items-center">
-      <div class="max-w-xl mx-auto px-6 sm:px-10 lg:px-12 py-16 sm:py-20 lg:py-28">
+    <div class="relative h-56 sm:h-72 lg:h-auto lg:order-2">
+      <picture>
+        <source srcset="/images/hero-bridge.webp" type="image/webp" />
+        <img src="/images/hero-bridge.jpg" alt="Herberts Travel coaches crossing stone bridge at golden hour" class="absolute inset-0 w-full h-full object-cover" />
+      </picture>
+    </div>
+    <div class="bg-navy-dark text-white flex items-center lg:order-1">
+      <div class="max-w-xl mx-auto px-6 sm:px-10 lg:px-12 py-12 sm:py-16 lg:py-28">
         <h1 class="font-heading text-4xl sm:text-5xl leading-tight">
           Getting people where they need to be — <span class="text-gold">since 1990</span>
         </h1>
@@ -21,12 +27,6 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
       </div>
-    </div>
-    <div class="relative h-72 sm:h-96 lg:h-auto">
-      <picture>
-        <source srcset="/images/hero-bridge.webp" type="image/webp" />
-        <img src="/images/hero-bridge.jpg" alt="Herberts Travel coaches crossing stone bridge at golden hour" class="absolute inset-0 w-full h-full object-cover" />
-      </picture>
     </div>
   </section>
 
